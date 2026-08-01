@@ -1,13 +1,23 @@
 import { MapPin, Phone } from "lucide-react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo/Logo.jpeg";
 import "./Footer.css";
 
 function Footer() {
+
+  const handleClick = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <footer className="footer">
       <div className="footer-grid">
 
+        {/* BRAND */}
         <div className="footer-brand">
           <img src={logo} alt="New Spartans Gym logo" />
 
@@ -19,25 +29,51 @@ function Footer() {
           </p>
         </div>
 
+        {/* QUICK LINKS */}
         <div>
           <h4>Quick Links</h4>
 
           <div className="footer-links">
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/services">Services</Link>
-            <Link to="/transformations">Transformations</Link>
-            <Link to="/gallery">Gallery</Link>
-            <Link to="/contact">Contact</Link>
+
+            <NavLink to="/" onClick={handleClick}>
+              Home
+            </NavLink>
+
+            <NavLink to="/about" onClick={handleClick}>
+              About
+            </NavLink>
+
+            <NavLink to="/trainer" onClick={handleClick}>
+              Trainer
+            </NavLink>
+
+            <NavLink to="/services" onClick={handleClick}>
+              Services
+            </NavLink>
+
+            <NavLink to="/transformations" onClick={handleClick}>
+              Transformations
+            </NavLink>
+
+            <NavLink to="/gallery" onClick={handleClick}>
+              Gallery
+            </NavLink>
+
+            <NavLink to="/contact" onClick={handleClick}>
+              Contact
+            </NavLink>
+
           </div>
         </div>
 
+        {/* CONTACT */}
         <div>
           <h4>Contact</h4>
 
           <p className="footer-contact">
             <MapPin size={18} />
-            1S/2, 5th Cross Street, Ambai Road, Opp. JK Mall, Alangulam
+            1S/2, 5th Cross Street, Ambai Road,
+            Opp. JK Mall, Alangulam
           </p>
 
           <p className="footer-contact">
@@ -56,6 +92,7 @@ function Footer() {
           </a>
 
         </div>
+
       </div>
 
       <div className="footer-bottom">

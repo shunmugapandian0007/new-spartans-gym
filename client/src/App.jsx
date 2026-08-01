@@ -11,6 +11,7 @@ import Transformations from "./pages/Transformations/Transformations";
 import Gallery from "./pages/Gallery/Gallery";
 import Trainer from "./pages/Trainer/Trainer";
 import Contact from "./pages/Contact/Contact";
+
 function App() {
   return (
     <BrowserRouter>
