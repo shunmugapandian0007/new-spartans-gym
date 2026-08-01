@@ -1,0 +1,56 @@
+main {
+  min-height: 100vh;
+}
+
+.page-container {
+  width: min(90%, 1250px);
+  margin: auto;
+}
+
+.page-hero {
+  min-height: 45vh;
+  padding: 150px 5% 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.9)),
+    url("./assets/images/Gym Photo 2.jpeg") center/cover;
+}
+
+.page-hero h1 {
+  font-family: "Anton", sans-serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  letter-spacing: 2px;
+}
+
+.page-hero h1 span {
+  color: var(--yellow);
+}
+
+.section-label {
+  color: var(--yellow);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+}
+
+.section-title {
+  margin-top: 10px;
+  font-family: "Anton", sans-serif;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+
+.section-title span {
+  color: var(--yellow);
+}
+
+.section-description {
+  color: var(--light-grey);
+  line-height: 1.8;
+  margin-top: 18px;
+}
